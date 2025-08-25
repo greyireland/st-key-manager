@@ -1,0 +1,1 @@
+exec ./bin/st-key-manager -f ./etc/st-key-manager.yaml

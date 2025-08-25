@@ -1,0 +1,14 @@
+syntax = "proto3";
+package keymanager;
+option go_package = "./keymanager";
+
+service Keymanager {
+  rpc GetKey(GetKeyRequest) returns (GetKeyReply);
+}
+message GetKeyRequest {
+  string key = 1;
+  string env = 2;
+}
+message GetKeyReply {
+  string data = 1;
+}

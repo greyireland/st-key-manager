@@ -14,12 +14,11 @@ import (
 	"st-key-manager/pkg/jsonx"
 )
 
-var configFile = flag.String("f", "etc/st-key-manager.yaml", "the config file")
+var configFile = flag.String("f", "./etc/st-key-manager.yaml", "the config file")
 
 func main() {
 	flag.Parse()
 	log.Root().SetHandler(log.DefaultFileHandler())
-
 	//log.Root().SetHandler(log.StdoutHandler)
 	var c config.Config
 	conf.MustLoad(&c, *configFile)
